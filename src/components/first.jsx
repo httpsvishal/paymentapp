@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, TextField } from "@mui/material";
+import {TextField } from "@mui/material";
 import BookingSummary from "./bookingsumm";
 import Pricing from "./pricing";
 const First = ({ formData, setFormData }) => {
@@ -11,14 +11,15 @@ const First = ({ formData, setFormData }) => {
         });
     };
     return (
-        <main className="max-w-[1200px] mx-auto grid lg:grid-cols-4 md:grid-cols-4 gap-5 p-3 m-3">
-            <div className="contactinfo box col-span-3 rounded border p-3 border-black">
+        <main className="max-w-[1250px] mx-auto grid lg:grid-cols-10 md:grid-cols-10 text-base gap-5 p-3 m-3">
+            <div className ="col-span-7">
+            <div className="contactinfo box col-span-8 rounded-xl border p-7 border-black">
                 <h2 className="text-xl font-semibold ">Contact Details</h2>
                 <p className="my-5">
                     This information will be used to send you confirmation and update about your booking
                 </p>
                 <div className="flex gap-5">
-                    <div>
+                    <div className="grow">
                         <div>
                             <TextField
                                 label="First Name"
@@ -28,8 +29,8 @@ const First = ({ formData, setFormData }) => {
                                 name="custFirstName"
                                 value={formData.custFirstName}
                                 onChange={handleChange}
-                                InputProps={{ style: { fontSize: 16, color: "black" } }} // Increase input text size
-                                InputLabelProps={{ style: { fontSize: 16, color: "black" } }} // Increase label text size
+                                InputProps={{ style: { fontSize: 16, color: "black" } }} 
+                                InputLabelProps={{ style: { fontSize: 16, color: "black" } }}
                                 sx={{
                                     width: '100%',
                                     '& .MuiOutlinedInput-root': {
@@ -98,7 +99,7 @@ const First = ({ formData, setFormData }) => {
                                 }} />
                         </div>
                     </div>
-                    <div>
+                    <div className="grow">
                         <div>
                             <TextField
                                 label="Last Name"
@@ -154,14 +155,14 @@ const First = ({ formData, setFormData }) => {
                     </div>
                 </div>
             </div>
-            <BookingSummary />
-            <div className="contactinfo box col-span-3 rounded border p-3 border-black">
+            
+            <div className="contactinfo box col-span-3 rounded-xl mt-5 border p-3 border-black">
 
                 <p className="my-5">
                     Lead Traveller
                 </p>
                 <div className="flex gap-5">
-                    <div>
+                    <div className="grow">
                         <div>
                             <TextField
                                 label="First Name"
@@ -201,7 +202,7 @@ const First = ({ formData, setFormData }) => {
                                 InputProps={{ style: { fontSize: 16, color: "black" } }} 
                                 InputLabelProps={{ style: { fontSize: 16, color: "black" } }}
                                 sx={{
-                                    width: '100$',
+                                    width: '100%',
                                     '& .MuiOutlinedInput-root': {
                                         '& fieldset': {
                                             borderColor: 'black', 
@@ -242,7 +243,7 @@ const First = ({ formData, setFormData }) => {
                                 }} />
                         </div>
                     </div>
-                    <div>
+                    <div className="grow">
                         <div>
                             <TextField
                                 label="Last Name"
@@ -298,8 +299,12 @@ const First = ({ formData, setFormData }) => {
                     </div>
                 </div>
             </div>
+            </div>
+            <div className="col-span-3 ">
+            <BookingSummary />
             <Pricing />
-
+            
+            </div>
         </main>
     );
 };

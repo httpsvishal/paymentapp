@@ -40,3 +40,9 @@
 .box{
   border-color: #A8A8A8;
 }
+.mrp p{
+  text-decoration: line-through
+}
+li{
+  list-style-type: square;
+}
