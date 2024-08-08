@@ -21,7 +21,7 @@ const Second = ({ formData, setFormData }) => {
 
     return (
         <main className="max-w-[1200px] text-base box mx-auto grid lg:grid-cols-10 md:grid-cols-10 gap-5 p-3 m -3">
-            <div className="lg:col-span-7 md:col-span-7 rounded-xl box p-7 border border-black row-span-3">
+            <div className="lg:col-span-7 md:col-span-7 rounded-xl box p-7 border border-black  row-span-3">
                 <h2 className="text-2xl ">Payment</h2>
                 <div className="flex mt-3 items-center">
                     <input

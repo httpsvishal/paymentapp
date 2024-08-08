@@ -68,9 +68,9 @@ return (
         </div>
         <hr />
         {showStep(currentStep)}
-        <div className="mx-5 px-2">
-            <div className="flex gap-5 mx-5">
-                <Button disabled={currentStep === 1} onClick={handleBack} size="large" style={{ width: "15%", height: "50px", color: "white", backgroundColor: "black" }}>
+        <div className="max-w-[1250px] mx-auto text-base gap-5 p-3 m-3">
+            <div className="flex gap-5 ">
+                <Button disabled={currentStep === 1} onClick={handleBack} size="large" style={{ width: "15%", height: "50px", color: "black", backgroundColor: "white" , border: "1px solid black" }}>
                     Back
                 </Button>
                 <Button

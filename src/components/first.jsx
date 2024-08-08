@@ -1,15 +1,25 @@
 import React from "react";
-import {TextField } from "@mui/material";
+import {TextField, Select, MenuItem, FormControl, InputLabel} from "@mui/material";
 import BookingSummary from "./bookingsumm";
 import Pricing from "./pricing";
+import Foreigner from "./Foreigner";
+
 const First = ({ formData, setFormData }) => {
+    const countries = [
+        "United States", "Canada", "United Kingdom", "Australia", "Germany", "France", "India", "China", "Japan", "Brazil",
+        "Mexico", "Russia", "Italy", "Spain", "South Korea", "Netherlands", "Turkey", "Saudi Arabia", "Switzerland", "Argentina",
+        "South Africa", "Sweden", "Poland", "Belgium", "Norway", "Austria", "Denmark", "Finland", "Ireland", "New Zealand",
+        "Singapore", "Malaysia", "Thailand", "Indonesia", "Philippines", "Vietnam", "Pakistan", "Bangladesh", "Nigeria", "Egypt"
+    ];
     const handleChange = (e) => {
         const { name, value } = e.target;
+        console.log(`Changing ${name} to ${value}`); 
         setFormData({
             ...formData,
             [name]: value
         });
     };
+    console.log(`Current country: ${formData.country}`);
     return (
         <main className="max-w-[1250px] mx-auto grid lg:grid-cols-10 md:grid-cols-10 text-base gap-5 p-3 m-3">
             <div className ="col-span-7">
@@ -127,178 +137,29 @@ const First = ({ formData, setFormData }) => {
                                 }} />
                         </div>
                         <div>
-                            <TextField
-                                label="Country/region of residence"
-                                margin="normal"
-                                variant="outlined"
-                                required
-                                name="custCountry"
-                                value={formData.custCountry}
-                                onChange={handleChange}
-                                InputProps={{ style: { fontSize: 16, color: "black" } }}
-                                InputLabelProps={{ style: { fontSize: 16, color: "black" } }}
-                                sx={{
-                                    width: '100%',
-                                    '& .MuiOutlinedInput-root': {
-                                        '& fieldset': {
-                                            borderColor: 'black', 
-                                        },
-                                        '&:hover fieldset': {
-                                            borderColor: 'black', 
-                                        },
-                                        '&.Mui-focused fieldset': {
-                                            borderColor: 'black',
-                                        },
-                                    }
-                                }} />
+                        <FormControl margin="normal" sx={{ width: '100%' }}>
+                                <InputLabel sx={{ color: 'black', fontSize: "14px" }}>Country</InputLabel>
+                                <Select
+                                    label="Country"
+                                    defaultValue=""
+                                    name="country"
+                                    value={formData.country}
+                                    onChange={handleChange}
+
+                                >
+                                    {countries.map((country, index) => (
+                                        <MenuItem key={index} value={country}>
+                                            {country}
+                                        </MenuItem>
+                                    ))}
+                                </Select>
+                            </FormControl>
                         </div>
                     </div>
                 </div>
             </div>
+            {formData.country && formData.country !== "India" && <Foreigner formData={formData} setFormData={setFormData} />}
             
-            <div className="contactinfo box col-span-3 rounded-xl mt-5 border p-3 border-black">
-
-                <p className="my-5">
-                    Lead Traveller
-                </p>
-                <div className="flex gap-5">
-                    <div className="grow">
-                        <div>
-                            <TextField
-                                label="First Name"
-                                margin="normal"
-                                variant="outlined"
-                                required
-                                name="travFirstName"
-                                value={formData.travFirstName}
-                                onChange={handleChange}
-
-                                InputProps={{ style: { fontSize: 16, color: "black" } }} 
-                                InputLabelProps={{ style: { fontSize: 16, color: "black" } }} 
-                                sx={{
-                                    width: '100%',
-                                    '& .MuiOutlinedInput-root': {
-                                        '& fieldset': {
-                                            borderColor: 'black', 
-                                        },
-                                        '&:hover fieldset': {
-                                            borderColor: 'black', 
-                                        },
-                                        '&.Mui-focused fieldset': {
-                                            borderColor: 'black',
-                                        },
-                                    }
-                                }} />
-                        </div>
-                        <div>
-                            <TextField
-                                label="Passport Number"
-                                margin="normal"
-                                variant="outlined"
-                                required
-                                name="passportNumber"
-                                value={formData.passportNumber}
-                                onChange={handleChange}
-                                InputProps={{ style: { fontSize: 16, color: "black" } }} 
-                                InputLabelProps={{ style: { fontSize: 16, color: "black" } }}
-                                sx={{
-                                    width: '100%',
-                                    '& .MuiOutlinedInput-root': {
-                                        '& fieldset': {
-                                            borderColor: 'black', 
-                                        },
-                                        '&:hover fieldset': {
-                                            borderColor: 'black',
-                                        },
-                                        '&.Mui-focused fieldset': {
-                                            borderColor: 'black', 
-                                        },
-                                    }
-                                }} />
-                        </div>
-                        <div>
-                            <TextField
-                                label="Expiration Date"
-                                margin="normal"
-                                variant="outlined"
-                                required
-                                name="passportExpiry"
-                                value={formData.passportExpiry}
-                                onChange={handleChange}
-                                InputProps={{ style: { fontSize: 16, color: "black" } }} 
-                                InputLabelProps={{ style: { fontSize:16, color: "black" } }} 
-                                sx={{
-                                    width: '100%',
-                                    '& .MuiOutlinedInput-root': {
-                                        '& fieldset': {
-                                            borderColor: 'black', 
-                                        },
-                                        '&:hover fieldset': {
-                                            borderColor: 'black', 
-                                        },
-                                        '&.Mui-focused fieldset': {
-                                            borderColor: 'black', 
-                                        },
-                                    }
-                                }} />
-                        </div>
-                    </div>
-                    <div className="grow">
-                        <div>
-                            <TextField
-                                label="Last Name"
-                                margin="normal"
-                                variant="outlined"
-                                required
-                                name="travLastName"
-                                value={formData.travLastName}
-                                onChange={handleChange}
-                                InputProps={{ style: { fontSize: 16, color: "black" } }} 
-                                InputLabelProps={{ style: { fontSize: 16, color: "black" } }} 
-                                sx={{
-                                    width: '100%',
-                                    '& .MuiOutlinedInput-root': {
-                                        '& fieldset': {
-                                            borderColor: 'black', 
-                                        },
-                                        '&:hover fieldset': {
-                                            borderColor: 'black', 
-                                        },
-                                        '&.Mui-focused fieldset': {
-                                            borderColor: 'black', 
-                                        },
-                                    }
-                                }} />
-                        </div>
-                        <div>
-                            <TextField
-                                label="Passport Nationality"
-                                margin="normal"
-                                variant="outlined"
-                                required
-                                name="passportNationality"
-                                value={formData.passportNationality}
-                                onChange={handleChange}
-                                InputProps={{ style: { fontSize: 16, color: "black" } }} 
-                                InputLabelProps={{ style: { fontSize: 16, color: "black" } }} 
-                                sx={{
-                                    width: '100%',
-                                    '& .MuiOutlinedInput-root': {
-                                        '& fieldset': {
-                                            borderColor: 'black', 
-                                        },
-                                        '&:hover fieldset': {
-                                            borderColor: 'black',
-                                        },
-                                        '&.Mui-focused fieldset': {
-                                            borderColor: 'black', 
-                                        },
-                                    }
-                                }} />
-                        </div>
-                    </div>
-                </div>
-            </div>
             </div>
             <div className="col-span-3 ">
             <BookingSummary />
