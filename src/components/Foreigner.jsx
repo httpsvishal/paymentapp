@@ -13,38 +13,8 @@ const Foreigner = ({formData,setFormData}) => {
     return(
         <div className="contactinfo box col-span-3 rounded-xl mt-5 border p-3 border-black">
 
-                <p className="my-5">
-                    Lead Traveller
-                </p>
                 <div className="flex gap-5">
                     <div className="grow">
-                        <div>
-                            <TextField
-                                label="First Name"
-                                margin="normal"
-                                variant="outlined"
-                                required
-                                name="travFirstName"
-                                value={formData.travFirstName}
-                                onChange={handleChange}
-
-                                InputProps={{ style: { fontSize: 16, color: "black" } }} 
-                                InputLabelProps={{ style: { fontSize: 16, color: "black" } }} 
-                                sx={{
-                                    width: '100%',
-                                    '& .MuiOutlinedInput-root': {
-                                        '& fieldset': {
-                                            borderColor: 'black', 
-                                        },
-                                        '&:hover fieldset': {
-                                            borderColor: 'black', 
-                                        },
-                                        '&.Mui-focused fieldset': {
-                                            borderColor: 'black',
-                                        },
-                                    }
-                                }} />
-                        </div>
                         <div>
                             <TextField
                                 label="Passport Number"
@@ -60,7 +30,7 @@ const Foreigner = ({formData,setFormData}) => {
                                     width: '100%',
                                     '& .MuiOutlinedInput-root': {
                                         '& fieldset': {
-                                            borderColor: 'black', 
+                                            borderColor: '#A8A8A8', 
                                         },
                                         '&:hover fieldset': {
                                             borderColor: 'black',
@@ -86,7 +56,7 @@ const Foreigner = ({formData,setFormData}) => {
                                     width: '100%',
                                     '& .MuiOutlinedInput-root': {
                                         '& fieldset': {
-                                            borderColor: 'black', 
+                                            borderColor: '#A8A8A8', 
                                         },
                                         '&:hover fieldset': {
                                             borderColor: 'black', 
@@ -99,32 +69,6 @@ const Foreigner = ({formData,setFormData}) => {
                         </div>
                     </div>
                     <div className="grow">
-                        <div>
-                            <TextField
-                                label="Last Name"
-                                margin="normal"
-                                variant="outlined"
-                                required
-                                name="travLastName"
-                                value={formData.travLastName}
-                                onChange={handleChange}
-                                InputProps={{ style: { fontSize: 16, color: "black" } }} 
-                                InputLabelProps={{ style: { fontSize: 16, color: "black" } }} 
-                                sx={{
-                                    width: '100%',
-                                    '& .MuiOutlinedInput-root': {
-                                        '& fieldset': {
-                                            borderColor: 'black', 
-                                        },
-                                        '&:hover fieldset': {
-                                            borderColor: 'black', 
-                                        },
-                                        '&.Mui-focused fieldset': {
-                                            borderColor: 'black', 
-                                        },
-                                    }
-                                }} />
-                        </div>
                         <div>
                             <TextField
                                 label="Passport Nationality"
@@ -140,7 +84,7 @@ const Foreigner = ({formData,setFormData}) => {
                                     width: '100%',
                                     '& .MuiOutlinedInput-root': {
                                         '& fieldset': {
-                                            borderColor: 'black', 
+                                            borderColor: '#A8A8A8', 
                                         },
                                         '&:hover fieldset': {
                                             borderColor: 'black',

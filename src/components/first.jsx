@@ -45,7 +45,7 @@ const First = ({ formData, setFormData }) => {
                                     width: '100%',
                                     '& .MuiOutlinedInput-root': {
                                         '& fieldset': {
-                                            borderColor: 'black', // Change border color
+                                            borderColor: '#A8A8A8', // Change border color
                                         },
                                         '&:hover fieldset': {
                                             borderColor: 'black', // Change border color on hover
@@ -71,7 +71,7 @@ const First = ({ formData, setFormData }) => {
                                     width: '100%',
                                     '& .MuiOutlinedInput-root': {
                                         '& fieldset': {
-                                            borderColor: 'black', // Change border color
+                                            borderColor: '#A8A8A8', // Change border color
                                         },
                                         '&:hover fieldset': {
                                             borderColor: 'black', // Change border color on hover
@@ -97,7 +97,7 @@ const First = ({ formData, setFormData }) => {
                                     width: '100%',
                                     '& .MuiOutlinedInput-root': {
                                         '& fieldset': {
-                                            borderColor: 'black', // Change border color
+                                            borderColor: '#A8A8A8', // Change border color
                                         },
                                         '&:hover fieldset': {
                                             borderColor: 'black', // Change border color on hover
@@ -125,7 +125,7 @@ const First = ({ formData, setFormData }) => {
                                     width: '100%',
                                     '& .MuiOutlinedInput-root': {
                                         '& fieldset': {
-                                            borderColor: 'black',
+                                            borderColor: '#A8A8A8',
                                         },
                                         '&:hover fieldset': {
                                             borderColor: 'black',
@@ -158,6 +158,9 @@ const First = ({ formData, setFormData }) => {
                     </div>
                 </div>
             </div>
+            <p className ="my-3">
+                <span className="font-semibold">Note:</span> Each candidate must carry their ID card at the time of visit.
+            </p>
             {formData.country && formData.country !== "India" && <Foreigner formData={formData} setFormData={setFormData} />}
             
             </div>

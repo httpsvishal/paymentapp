@@ -69,17 +69,19 @@ return (
         <hr />
         {showStep(currentStep)}
         <div className="max-w-[1250px] mx-auto text-base gap-5 p-3 m-3">
-            <div className="flex gap-5 ">
-                <Button disabled={currentStep === 1} onClick={handleBack} size="large" style={{ width: "15%", height: "50px", color: "black", backgroundColor: "white" , border: "1px solid black" }}>
+            <div className={`flex gap-5  ${currentStep === 3 ? 'justify-center' : ''}`}>
+                {currentStep !== 4 && (
+                    <Button disabled={currentStep === 1} onClick={handleBack} size="large" style={{ width: "20%", height: "50px", color: "black", backgroundColor: "white" , border: "1px solid black" }}>
                     Back
                 </Button>
+                )}
                 <Button
                     variant="contained"
-                    size="large" style={{ width: "15%", height: "50px", color: "white", backgroundColor: "black" }}
+                    size="large" style={{ width: "20%", height: "50px", color: "white", backgroundColor: "black" }}
                     onClick={handleNext}
                     disabled={currentStep === 3}
                 >
-                    {currentStep === 3 ? 'Finish' : 'Next'}
+                    {currentStep === 3 ? 'Download Ticket' : 'Next'}
                 </Button>
             </div>
         </div>

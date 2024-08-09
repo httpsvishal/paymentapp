@@ -21,7 +21,7 @@ const Second = ({ formData, setFormData }) => {
 
     return (
         <main className="max-w-[1200px] text-base box mx-auto grid lg:grid-cols-10 md:grid-cols-10 gap-5 p-3 m -3">
-            <div className="lg:col-span-7 md:col-span-7 rounded-xl box p-7 border border-black  row-span-3">
+            <div className="lg:col-span-7 md:col-span-7 rounded-xl box p-7 border border-black max-h row-span-3">
                 <h2 className="text-2xl ">Payment</h2>
                 <div className="flex mt-3 items-center">
                     <input
@@ -50,7 +50,7 @@ const Second = ({ formData, setFormData }) => {
                                     width: '100%',
                                     '& .MuiOutlinedInput-root': {
                                         '& fieldset': {
-                                            borderColor: 'black',
+                                            borderColor: '#A8A8A8',
                                         },
                                         '&:hover fieldset': {
                                             borderColor: 'black',
@@ -76,7 +76,7 @@ const Second = ({ formData, setFormData }) => {
                                     width: '100%',
                                     '& .MuiOutlinedInput-root': {
                                         '& fieldset': {
-                                            borderColor: 'black',
+                                            borderColor: '#A8A8A8',
                                         },
                                         '&:hover fieldset': {
                                             borderColor: 'black',
@@ -104,7 +104,7 @@ const Second = ({ formData, setFormData }) => {
                                             color: 'black',
                                             '& .MuiOutlinedInput-root': {
                                                 '& fieldset': {
-                                                    borderColor: 'black',
+                                                    borderColor: '#A8A8A8',
                                                 },
                                                 '&:hover fieldset': {
                                                     borderColor: 'black',
@@ -139,7 +139,7 @@ const Second = ({ formData, setFormData }) => {
                                             width: '100%',
                                             '& .MuiOutlinedInput-root': {
                                                 '& fieldset': {
-                                                    borderColor: 'black', // Change border color
+                                                    borderColor: '#A8A8A8', // Change border color
                                                 },
                                                 '&:hover fieldset': {
                                                     borderColor: 'black', // Change border color on hover
@@ -174,7 +174,7 @@ const Second = ({ formData, setFormData }) => {
                                        
                                         '& .MuiOutlinedInput-root': {
                                             '& fieldset': {
-                                                borderColor: 'black', // Change border color
+                                                borderColor: '#A8A8A8', // Change border color
                                             },
                                             '&:hover fieldset': {
                                                 borderColor: 'black', // Change border color on hover
@@ -227,7 +227,7 @@ const Second = ({ formData, setFormData }) => {
                                     },
                                     '& .MuiOutlinedInput-root': {
                                         '& fieldset': {
-                                            borderColor: 'black', // Change border color
+                                            borderColor: '#A8A8A8', // Change border color
                                         },
                                         '&:hover fieldset': {
                                             borderColor: 'black', // Change border color on hover

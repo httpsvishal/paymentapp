@@ -7,7 +7,7 @@ const Confirmation = () => {
         
         <>
         <div className="text-center my-5">
-        <h1>
+        <h1 className="font-semibold">
             Your Booking has been confirmed!
         </h1>
         </div>
