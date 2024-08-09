@@ -11,7 +11,7 @@ const Foreigner = ({formData,setFormData}) => {
         });
     };
     return(
-        <div className="contactinfo box col-span-3 rounded-xl mt-5 border p-3 border-black">
+        <div className="contactinfo box col-span-3 rounded-xl mt-5 border mb-5 p-3 border-black">
 
                 <div className="flex gap-5">
                     <div className="grow">

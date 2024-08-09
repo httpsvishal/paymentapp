@@ -3,8 +3,9 @@ import { TextField, Select, MenuItem, FormControl, InputLabel , InputAdornment} 
 import BookingSummary from "./bookingsumm";
 import Pricing from "./pricing";
 import Foreigner from "./Foreigner";
+import NextButton from "./nextButton";
 
-const First = ({ formData, setFormData }) => {
+const First = ({ formData, setFormData ,setCurrentStep, currentStep }) => {
     const countries = [
         "United States", "Canada", "United Kingdom", "Australia", "Germany", "France", "India", "China", "Japan", "Brazil",
         "Mexico", "Russia", "Italy", "Spain", "South Korea", "Netherlands", "Turkey", "Saudi Arabia", "Switzerland", "Argentina",
@@ -71,11 +72,12 @@ const First = ({ formData, setFormData }) => {
             });
         }
     };
+    
     console.log(`Current country: ${formData.country}`);
     return (
         <main className="max-w-[1250px] mx-auto grid lg:grid-cols-10 md:grid-cols-10 text-base gap-5 p-3 m-3">
             <div className="col-span-7">
-                <div className="contactinfo box col-span-8 rounded-xl border p-7 border-black">
+                <div className="contactinfo box col-span-8 rounded-xl border p-7 border-black mb-5">
                     <h2 className="text-xl font-semibold ">Contact Details</h2>
                     <p className="my-5">
                         This information will be used to send you confirmation and update about your booking
@@ -216,11 +218,13 @@ const First = ({ formData, setFormData }) => {
                         </div>
                     </div>
                 </div>
-                <p className="my-3">
-                    <span className="font-semibold">Note:</span> Each candidate must carry their ID card at the time of visit.
+                <p className="my-3 text-red-500">
+                    <span className="font-semibold text-stone-950">Note:</span> Each candidate must carry their ID card at the time of visit.
                 </p>
                 {formData.country && formData.country !== "India" && <Foreigner formData={formData} setFormData={setFormData} />}
-
+                <div >
+                    <NextButton currentStep={currentStep} setCurrentStep={setCurrentStep} />
+                </div>
             </div>
             <div className="col-span-3 ">
                 <BookingSummary />

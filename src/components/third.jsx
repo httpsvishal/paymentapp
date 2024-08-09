@@ -1,7 +1,7 @@
 import React from "react";
 import confirm from "../animations/confirm.json";
 import Lottie from "lottie-react";
-
+import { Button } from "@mui/material";
 const Confirmation = () => {
     return(
         
@@ -13,8 +13,16 @@ const Confirmation = () => {
         </div>
         <div className="confirm flex justify-center items-center">
             
-            <Lottie animationData={confirm} style={{width: "500px"}} loop={false} />
+            <Lottie animationData={confirm} style={{width: "400px"}} loop={false} />
             
+        </div>
+        <div className="flex justify-center">
+            <Button
+                variant="contained"
+                size="large" style={{ width: "20%", height: "50px", color: "white", backgroundColor: "black" }}
+            >
+                Download Ticket
+            </Button>
         </div>
         </>
     );

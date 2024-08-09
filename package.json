@@ -10,13 +10,13 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "autoprefixer": "^10.4.19",
+    "autoprefixer": "^10.4.20",
     "lottie-react": "^2.4.0",
-    "postcss": "^8.4.40",
+    "postcss": "^8.4.41",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
-    "tailwindcss": "^3.4.7",
+    "tailwindcss": "^3.4.9",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -44,6 +44,7 @@
     ]
   },
   "devDependencies": {
+    "daisyui": "^4.12.10",
     "eslint": "^8.57.0",
     "eslint-config-react-app": "^7.0.1"
   }

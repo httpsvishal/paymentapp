@@ -3,7 +3,9 @@ import cards from "../images/cards.png";
 import { TextField, Select, MenuItem, FormControl, InputLabel } from "@mui/material";
 import BookingSummary from "./bookingsumm";
 import Pricing from "./pricing";
-const Second = ({ formData, setFormData }) => {
+import NextButton from "./nextButton";
+import { useState } from "react";
+const Second = ({ formData, setFormData ,setCurrentStep, currentStep  }) => {
     const countries = [
         "United States", "Canada", "United Kingdom", "Australia", "Germany", "France", "India", "China", "Japan", "Brazil",
         "Mexico", "Russia", "Italy", "Spain", "South Korea", "Netherlands", "Turkey", "Saudi Arabia", "Switzerland", "Argentina",
@@ -21,7 +23,8 @@ const Second = ({ formData, setFormData }) => {
 
     return (
         <main className="max-w-[1200px] text-base box mx-auto grid lg:grid-cols-10 md:grid-cols-10 gap-5 p-3 m -3">
-            <div className="lg:col-span-7 md:col-span-7 rounded-xl box p-7 border border-black max-h row-span-3">
+            <div className="lg:col-span-7 md:col-span-7 ">
+                <div className="rounded-xl box p-7 border border-black max-h row-span-3 mb-5">
                 <h2 className="text-2xl ">Payment</h2>
                 <div className="flex mt-3 items-center">
                     <input
@@ -242,7 +245,11 @@ const Second = ({ formData, setFormData }) => {
                         </div>
                     </div>
                 </div>
-
+                <div >
+                    <NextButton currentStep={currentStep} setCurrentStep={setCurrentStep} />
+                </div>  
+                </div>
+                
                 <div className="col-span-3">
                     <BookingSummary />
 
