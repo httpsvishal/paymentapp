@@ -30,13 +30,13 @@ const PaymentPage = () => {
     };
     const [currentStep, setCurrentStep] = useState(1);
     const [formData, setFormData] = useState({
-        custFirstName: '',
-        custLastName: '',
+        firstName: '',
+        lastName: '',
         email: '',
-        custCountry: '',
+        country: '',
+        phonecode: '',
         phNumber: '',
-        travFirstName: '',
-        travLastName: '',
+        idNumber: '',
         passportNumber: '',
         passportNationality: '',
         passortExpiry: '',
@@ -46,7 +46,6 @@ const PaymentPage = () => {
         cardExpiryYear: '',
         cardCVV: '',
         cardZipCode: '',
-        cardCountry: ''
     });
 
 return (
