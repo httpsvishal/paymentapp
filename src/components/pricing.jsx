@@ -7,7 +7,7 @@ const Pricing = ()=>{
             <hr />
             <div className="grid grid-cols-6 m-3 text-sm ">
                     <div className="col-span-5 my-2">
-                        <p>
+                        <p  className="font-semibold">
                             Jungle Safari in Pilibhit Tiger Reserve
                         </p>
                         <p>2 Aug | 1 adult</p>
@@ -17,13 +17,13 @@ const Pricing = ()=>{
                     </div>
                     <div className="col-span-4 my-2" >
                         <p>Total</p>
-                        <p>with tax & fees</p>
+                        <p className="font-semibold">with tax & fees</p>
                     </div>
                     <div className="text-right col-span-2 my-2 mrp">
                         <p>INR 3181.51</p>
                     </div>
                     <div className="my-2" >
-                        <p>Total due</p>
+                        <p className="font-semibold">Total due</p>
                     </div>
                 
                     

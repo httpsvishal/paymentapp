@@ -215,6 +215,32 @@ const First = ({ formData, setFormData ,setCurrentStep, currentStep }) => {
                                     </Select>
                                 </FormControl>
                             </div>
+                            <div>
+                                <TextField
+                                    label="ID Number"
+                                    margin="normal"
+                                    variant="outlined"
+                                    required
+                                    name="idNumber"
+                                    value={formData.idNumber}
+                                    onChange={handleChange}
+                                    InputProps={{ style: { fontSize: "14px", color: "black" } }}
+                                    InputLabelProps={{ style: { fontSize: "14px", color: "black" } }}
+                                    sx={{
+                                        width: '100%',
+                                        '& .MuiOutlinedInput-root': {
+                                            '& fieldset': {
+                                                borderColor: '#A8A8A8',
+                                            },
+                                            '&:hover fieldset': {
+                                                borderColor: 'black',
+                                            },
+                                            '&.Mui-focused fieldset': {
+                                                borderColor: 'black',
+                                            },
+                                        }
+                                    }} />
+                            </div>
                         </div>
                     </div>
                 </div>

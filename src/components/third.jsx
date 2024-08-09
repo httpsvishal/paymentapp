@@ -6,10 +6,15 @@ const Confirmation = () => {
     return(
         
         <>
-        <div className="text-center my-5">
-        <h1 className="font-semibold">
-            Your Booking has been confirmed!
+        <div className="text-center mt-2 ">
+        <h1 className="font-semibold text-2xl">
+        Check your Email!
         </h1>
+        <div className="confirmp flex justify-center">
+        <p>
+        Your booking details and tickets have been sent to your email. Please check your inbox for confirmation and instructions.
+        </p>
+        </div>
         </div>
         <div className="confirm flex justify-center items-center">
             

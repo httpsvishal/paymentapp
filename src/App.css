@@ -43,3 +43,22 @@
 .mrp p{
   text-decoration: line-through
 }
+.custom-steps .step::before {
+  height: 2px; /* Adjust the height as needed */
+}
+.custom-steps .step {
+  color: black; /* Set the text color to black */
+}
+.custom-steps .step-neutral {
+  color: black; /* Set the text color to black */
+}
+
+.custom-steps .step-neutral::before {
+  background-color: black; /* Set the line color to black */
+}
+.confirmp p{
+  width: 35vw;
+}
+.custom-steps {
+  width: 50vw; /* Set the width of the step bar */
+}
