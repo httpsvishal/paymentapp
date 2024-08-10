@@ -21,7 +21,7 @@ const Confirmation = () => {
             <Lottie animationData={confirm} style={{width: "400px"}} loop={false} />
             
         </div>
-        <div className="flex justify-center">
+        <div className="flex download justify-center">
             <Button
                 variant="contained"
                 size="large" style={{ width: "20%", height: "50px", color: "white", backgroundColor: "black" }}

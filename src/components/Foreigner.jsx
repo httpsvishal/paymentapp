@@ -11,10 +11,9 @@ const Foreigner = ({formData,setFormData}) => {
         });
     };
     return(
-        <div className="contactinfo box col-span-3 rounded-xl mt-5 border mb-5 p-3 border-black">
+        <div className="contactinfo box col-span-3 rounded-xl m-5 mt-5 border mb-5 p-3 border-black">
 
-                <div className="flex gap-5">
-                    <div className="grow">
+                <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-5">
                         <div>
                             <TextField
                                 label="Passport Number"
@@ -67,8 +66,7 @@ const Foreigner = ({formData,setFormData}) => {
                                     }
                                 }} />
                         </div>
-                    </div>
-                    <div className="grow">
+                    
                         <div>
                             <TextField
                                 label="Passport Nationality"
@@ -95,7 +93,7 @@ const Foreigner = ({formData,setFormData}) => {
                                     }
                                 }} />
                         </div>
-                    </div>
+                   
                 </div>
             </div>
     );

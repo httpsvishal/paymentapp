@@ -20,8 +20,9 @@ const NextButton = ({ currentStep, setCurrentStep }) => {
         setOpen(false);
     };
     return (
-        <>
+        <div className="ms-7">
         <Button
+           
             variant="contained"
             size="large" style={{ width: "20%", height: "50px", color: "white", backgroundColor: "black" }}
             onClick={handleNext}
@@ -75,7 +76,7 @@ const NextButton = ({ currentStep, setCurrentStep }) => {
           </Button>
         </DialogActions>
       </Dialog>
-        </>
+        </div>
         
         
     )

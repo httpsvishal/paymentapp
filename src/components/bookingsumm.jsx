@@ -3,7 +3,7 @@ import image from "../images/safari.png";
 
 const BookingSummary = () =>{
     return(
-        <div className="book box h-max rounded-xl border border-black">
+        <div className="book col-span-2 sm:col-span-3 box h-max rounded-xl border border-black">
                 <h2 className="text-2xl m-4">Booking Summary</h2>
                 <hr />
                 <div className="flex m-3 gap-2 text-sm">
