@@ -43,7 +43,7 @@ const PaymentPage = () => {
     }
     return (
         <>
-            <div className="flex justify-center items-center m-5">
+            {/* <div className="flex justify-center items-center m-5">
                 <ul className="steps text-sm custom-steps"
                 >
                     <li className={`step ${currentStep >= 1 ? 'step-neutral' : ''}`}>Payment Information</li>
@@ -51,7 +51,7 @@ const PaymentPage = () => {
                     <li className={`step ${currentStep >= 3 ? 'step-neutral' : ''}`}>Booking is Confirmed</li>
                 </ul>
             </div>
-            <hr />
+            <hr /> */}
             {showStep(currentStep)}
             
         </>
