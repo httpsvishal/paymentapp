@@ -78,8 +78,8 @@ const First = ({ formData, setFormData ,setCurrentStep, currentStep }) => {
         <main className="max-w-[1250px] mx-auto grid lg:grid-cols-10 md:grid-cols-10 text-base gap-5 p-3 m-3">
             <div className="col-span-7">
                 <div className="contactinfo box col-span-8 rounded-xl border p-7 border-black mb-5">
-                    <h2 className="text-2xl font-semibold ">Contact Details</h2>
-                    <p className="my-3 font-semibold">
+                    <h2 className="text-2xl font-semibold  ">Contact Details</h2>
+                    <p className="mt-5  font-semibold">
                         Fill the Details of Lead Traveller
                     </p>
                     <p>
@@ -204,10 +204,11 @@ const First = ({ formData, setFormData ,setCurrentStep, currentStep }) => {
                                     <InputLabel sx={{ color: 'black', fontSize: "14px" }}>Country</InputLabel>
                                     <Select
                                         label="Country"
-                                        defaultValue=""
+                                        defaultValue="India"
                                         name="country"
                                         value={formData.country}
                                         onChange={handleChange}
+                                        
 
                                     >
                                         {countries.map((country, index) => (

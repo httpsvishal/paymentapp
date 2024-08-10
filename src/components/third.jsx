@@ -6,8 +6,8 @@ const Confirmation = () => {
     return(
         
         <>
-        <div className="text-center mt-2 ">
-        <h1 className="font-semibold text-2xl">
+        <div className="text-center mt-5">
+        <h1 className="font-semibold text-2xl mt-11 mb-6">
         Check your Email!
         </h1>
         <div className="confirmp flex justify-center">

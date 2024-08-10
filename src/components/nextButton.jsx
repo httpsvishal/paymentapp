@@ -32,28 +32,28 @@ const NextButton = ({ currentStep, setCurrentStep }) => {
         <Dialog
         open={open}
         onClose={handleClose}
+        className="p-5"
         sx={{ textAlign: 'center' ,
             width: '450px', // Set the width
-            height: '450px', // Set the height to the same value to make it a square
-            maxWidth: '400px', // Ensure the dialog doesn't exceed this width
-            maxHeight: '400px', // Ensure the dialog doesn't exceed this height
+            height: '2000px', 
             margin: 'auto' // Center the dialog 
         }}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
         <DialogTitle id="alert-dialog-title" 
-        sx={{ fontWeight: 'bold', textAlign: 'center' }}
-        >{"Are You Sure ?"}</DialogTitle>
+        sx={{ fontWeight: 'bold', textAlign: 'center',marginTop: '10px', marginBottom :'4px',paddingBottom:"4px", color: 'black' }}
+        className="text-l font-bold"
+        >{"Ready to Go?"}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description"
-          sx = {{ textAlign: 'center' , color: 'black' ,
-            fontSize: '14px',}}
+          sx = {{ textAlign: 'center' , color: 'black' , paddingTop:"0px",
+            fontSize: '12px',}}
           >
-          Please confirm that all your details are correct before proceeding to payment.
+          Just a quick double-check! Make sure all your details are spot-on before we hit the payment button.
           </DialogContentText>
         </DialogContent>
-        <DialogActions sx={{justifyContent:"center"}}>
+        <DialogActions sx={{justifyContent:"center" }} className="mb-5">
           <Button onClick={handleClose} 
           sx={{ color: 'black',
               border: '1px solid black',
